@@ -10,6 +10,8 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
+  basePath: 'sql'
+  sqlDwSolutionName: 'ddo_azuresqldw_dw'
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
