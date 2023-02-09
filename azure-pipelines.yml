@@ -37,7 +37,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: '$(sqlDwSolutionName)/bin/$(buildConfiguration)/ddo_azuresqldw_dw.dacpac'
     ArtifactName: 'sql_dw_dacpac'
   displayName: 'Publish SQL DACPAC'
 
