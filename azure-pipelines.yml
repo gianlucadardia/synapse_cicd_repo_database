@@ -10,6 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
+  system.debug: true
   basePath: 'sql'
   sqlDwSolutionName: 'ddo_azuresqldw_dw'
   solution: '**/*.sln'
@@ -36,6 +37,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(basePath)/bin/$(buildConfiguration)/ddo_azuresqldw_dw.dacpac'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'sql_dw_dacpac'
-    displayName: 'Publish SQL DACPAC'
+  displayName: 'Publish SQL DACPAC'
+
