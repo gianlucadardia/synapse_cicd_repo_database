@@ -9,6 +9,8 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
+
+/*
 IF NOT EXISTS (SELECT 1 FROM dbo.dim_date)
 BEGIN
     PRINT '******Seeding dim_date table******';
@@ -20,3 +22,4 @@ BEGIN
     PRINT '******Seeding dim_time table******';
     EXEC dbo.load_dim_time;
 END
+*/
